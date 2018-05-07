@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/App.css';
+import './css/style.css';
 import { Header } from './components/Header/Header';
 import { Hero } from './components/Hero/Hero';
 import { Section } from './components/Section/Section';
