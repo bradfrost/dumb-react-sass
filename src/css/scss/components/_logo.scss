@@ -6,19 +6,12 @@
  * Branding image or text of the site
  */
 .c-logo {
-	max-width: 14rem;
+    display: inline;
 }
 
 /**
- * Logo link
- */
-.c-logo__link {
-	display: block;
-}
-
-/**
- * Logo image
+ * Logo image 
  */
 .c-logo__img {
-	display: block;
+    display: block;
 }

@@ -4,28 +4,29 @@
 
 /**
  * Primary navigation existing in the header and maybe the footer
+ * 1) The outer <nav> wrapper of the primary navigation
  */
+.c-primary-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
 
 /**
- * Primary navigation list
+ * Primary nav list
+ * 1) The list of nav items
  */
 .c-primary-nav__list {
-	display: flex;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /**
- * Primary navigation item
+ * Primary nav item
+ * 1) individual list item 
  */
 .c-primary-nav__item {
-	margin-right: 1rem;
-}
-
-/**
- * Primary navigation link
- */
-.c-primary-nav__link {
-	display: block;
-	padding: 0.5rem 0;
-	cursor: pointer;
-
+    margin-right: 2rem;
 }

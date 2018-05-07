@@ -19,7 +19,6 @@ Start building in the `src/components` folder with this folder structure
 
 ```js
 - ComponentName
-  - Component.css
   - ComponentName.stories.js
   - ComponentName.js
 ```

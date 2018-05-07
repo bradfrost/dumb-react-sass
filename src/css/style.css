@@ -1,3 +1,4 @@
+@charset "UTF-8";
  /*------------------------------------*\
     #TABLE OF CONTENTS
 \*------------------------------------*/
@@ -180,7 +181,8 @@ header, footer, nav, section, article, figure {
  * 2) Prevent Mobile Safari from scaling up text: https://blog.55minutes.com/2012/04/iphone-text-resizing/
  */
 body {
-  background: blue; }
+  font-family: sans-serif;
+  background: #fff; }
 
 /*------------------------------------*\
     #LINKS
@@ -501,6 +503,7 @@ tr {
  *    kinds of displays
  */
 .l-linelength-container {
+  margin: 0 auto;
   max-width: 36rem; }
 
 /*------------------------------------*\
@@ -525,135 +528,33 @@ tr {
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
-/*------------------------------------*\
-    #BUTTONS
-\*------------------------------------*/
 /**
- *
- * 1) Button or link that has functionality to it
+ * Global 
  */
-.c-btn {
-  display: inline-block;
-  border: 1px solid #131313;
-  border-radius: 4px;
-  background: #444;
-  color: #fff;
-  line-height: 1;
-  font-weight: bold;
-  padding: 1rem 2rem;
-  border: 0;
-  text-align: center;
-  transition: all 0.15s ease-out; }
-  .c-btn:hover, .c-btn:focus {
-    background: #808080; }
-
-/*
- * Inner container wrapper
- * 1) Container is direct decendant of <button>, since there's
- *    a bug with applying flexbox directly to a <button>
- * 2) Only needs to be used for buttons containing both icons and text
- */
-.c-btn__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-/*
- * Button icon
- */
-.c-btn__icon {
-  width: 1rem;
-  height: 1rem;
-  fill: #fff;
-  transition: fill 0.15s ease-out; }
-
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
 /**
- * 1) Global block at the bottom of each page that contains a navigation and other information.
+ * 1) Global footer at the bottom of each page that contains a navigation and other information.
  */
 .c-footer {
-  padding: 1rem;
-  background: #eee; }
+  background: #333;
+  color: #fff;
+  padding: 2rem; }
 
 /*------------------------------------*\
     #HEADER
 \*------------------------------------*/
 /**
- * Global block at the top of each page containing the navigation, logo, and other potential contents
+ * Global block at the top of each page containing the navigation, logo, and other potential utility nav
  */
 .c-header {
-  position: relative;
-  background: #eee; }
-
-/**
- * Header inner
- */
-.c-header__inner {
-  display: flex;
-  padding: 1rem;
-  /**
-   * Header inner within vertical header
-   */ }
-  @media all and (min-width: 70em) {
-    .c-header--vertical .c-header__inner {
-      flex-direction: column;
-      min-height: 100vh; } }
-
-/**
- * Header navigation button
- * 1) Button used to toggle the navigation on/off on small screens
- */
-.c-header__nav-btn {
-  margin-left: auto; }
-  @media all and (min-width: 70em) {
-    .c-header__nav-btn {
-      display: none; } }
-
-/**
- * Header navigation conntainer
- * 1) Contains the primary navigation and other possible patterns
- */
-.c-header__nav-container {
-  display: none;
-  /**
-   * Header navigation conntainer within vertical header
-   */ }
-  @media all and (min-width: 70em) {
-    .c-header__nav-container {
-      display: block;
-      margin-left: auto; } }
-  @media all and (min-width: 70em) {
-    .c-header--vertical .c-header__nav-container {
-      margin-left: 0; } }
-
-/**
- * Active header nav container
- */
-.c-header__nav-container.is-active {
-  display: block;
-  position: absolute;
-  background: #eee;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-  padding: 1rem;
-  /**
-   * Active header nav container within vertical header
-   */ }
-  @media all and (min-width: 70em) {
-    .c-header__nav-container.is-active {
-      display: block;
-      position: static;
-      padding: 0;
-      margin-left: auto;
-      width: inherit; } }
-  @media all and (min-width: 70em) {
-    .c-header--vertical .c-header__nav-container.is-active {
-      margin-left: 0;
-      width: 100%; } }
+  background: #ddd;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 10px; }
 
 /*------------------------------------*\
     #LOGO
@@ -662,29 +563,49 @@ tr {
  * Branding image or text of the site
  */
 .c-logo {
-  max-width: 14rem; }
+  display: inline; }
 
 /**
- * Logo link
- */
-.c-logo__link {
-  display: block; }
-
-/**
- * Logo image
+ * Logo image 
  */
 .c-logo__img {
   display: block; }
 
+/**
+ * Page 
+ */
 /*------------------------------------*\
-    #ICON
+    #SECTION
 \*------------------------------------*/
 /**
- * 1) Small image that represents functionality
+ * Section
+ * 1) A section is a discrete section of a web page 
  */
-.c-icon {
-  height: 16px;
-  width: 16px; }
+.c-section {
+  padding: 2rem; }
+
+/**
+ * Section header
+ * 1) contains the section title, description and other header content 
+ */
+.c-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem; }
+
+/**
+ * Section title 
+ */
+.c-section__title {
+  font-size: 2rem;
+  margin: 0; }
+
+/**
+ * Section description 
+ */
+.c-section__description {
+  margin: 0; }
 
 /*------------------------------------*\
     #PAGE HEADER
@@ -704,32 +625,182 @@ tr {
 .c-page-header__desc {
   margin-bottom: 2rem; }
 
+/**
+ * Navigation 
+ */
 /*------------------------------------*\
     #PRIMARY NAVIGATION
 \*------------------------------------*/
 /**
  * Primary navigation existing in the header and maybe the footer
+ * 1) The outer <nav> wrapper of the primary navigation
  */
+.c-primary-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center; }
+
 /**
- * Primary navigation list
+ * Primary nav list
+ * 1) The list of nav items
  */
 .c-primary-nav__list {
-  display: flex; }
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
 /**
- * Primary navigation item
+ * Primary nav item
+ * 1) individual list item 
  */
 .c-primary-nav__item {
-  margin-right: 1rem; }
+  margin-right: 2rem; }
 
 /**
- * Primary navigation link
+ * Forms 
  */
-.c-primary-nav__link {
-  display: block;
-  padding: 0.5rem 0;
-  cursor: pointer; }
+/*------------------------------------*\
+    #FIELDS
+\*------------------------------------*/
+/**
+ * 1) Consists of a label, form control, and an optional note about the field.
+ */
+.c-field {
+  margin-bottom: 2rem; }
 
+/**
+ * Field label
+ */
+.c-field__label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold; }
+
+/**
+ * Field body
+ */
+.c-field__body {
+  position: relative; }
+
+/**
+ * Field note
+ */
+.c-field__note {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #808080; }
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/**
+ * 1) Button or link that has functionality to it
+ */
+.c-btn {
+  background: #333;
+  color: #fff;
+  border: 0; }
+
+/**
+ * Secondary button
+ * 1) Different button style 
+ */
+.c-btn--secondary {
+  background: #eee;
+  color: #222;
+  border: 1px solid #eee; }
+
+/*------------------------------------*\
+    #INLINE FORM
+\*------------------------------------*/
+/**
+ * 1) An inline form displays an input and a button side-by-side.
+ * 2) Can be used for search, email newsletter signup, and other one-field forms
+ */
+.c-inline-form {
+  display: flex;
+  padding: 0.5rem 0; }
+
+.c-inline-form__input {
+  flex: 1;
+  padding: 0.5rem; }
+
+/**
+ * Blocks 
+ */
+/*------------------------------------*\
+    #CARD
+\*------------------------------------*/
+.c-card {
+  border: 1px solid #808080;
+  padding: 1rem; }
+
+.c-card--dark {
+  background: #000;
+  color: #fff; }
+
+/*------------------------------------*\
+    #HERO
+\*------------------------------------*/
+/**
+ * 1) A hero is a pronounced block typically situated at the top of a page layout 
+ */
+.c-hero {
+  background: #eee;
+  position: relative; }
+
+/**
+ * Hero image 
+ */
+.c-hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover; }
+
+/**
+ * Hero body
+ * 1) Contains the hero text, call to action, and other things 
+ */
+.c-hero__body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3rem 2rem;
+  z-index: 1; }
+
+/**
+ * Hero title 
+ */
+.c-hero__title {
+  font-size: 3rem;
+  margin: 0; }
+
+/**
+ * Hero description 
+ */
+.c-hero__description {
+  font-size: 1.4rem;
+  margin: 0; }
+
+/**
+ * Images 
+ */
+/*------------------------------------*\
+    #ICON
+\*------------------------------------*/
+/**
+ * 1) Small image that represents functionality
+ */
+.c-icon {
+  height: 16px;
+  width: 16px; }
+
+/**
+ * Text 
+ */
 /*------------------------------------*\
     #TEXT PASSAGE
 \*------------------------------------*/
@@ -806,36 +877,21 @@ tr {
     margin-bottom: 0.5rem;
     line-height: 1.6; }
 
+/**
+ * Lists 
+ */
 /*------------------------------------*\
-    #FIELDS
+    #CARD LIST
 \*------------------------------------*/
 /**
- * 1) Consists of a label, form control, and an optional note about the field.
+ * 1) A collection of cards displayed as a list or grid 
  */
-.c-field {
-  margin-bottom: 2rem; }
-
-/**
- * Field label
- */
-.c-field__label {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold; }
-
-/**
- * Field body
- */
-.c-field__body {
-  position: relative; }
-
-/**
- * Field note
- */
-.c-field__note {
-  display: inline-block;
-  font-size: 0.75rem;
-  color: #808080; }
+.c-card-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); }
 
 /*------------------------------------*\
     #UTILITIES

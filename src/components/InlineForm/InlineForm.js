@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./InlineForm.css";
 import { Button } from "../Button/Button";
 
 export class InlineForm extends Component {

@@ -3,9 +3,10 @@
 \*------------------------------------*/
 
 /**
- * 1) Global block at the bottom of each page that contains a navigation and other information.
+ * 1) Global footer at the bottom of each page that contains a navigation and other information.
  */
 .c-footer {
-	padding: 1rem;
-	background: $color-gray-07;
+    background: #333;
+    color: #fff;
+    padding: 2rem;
 }

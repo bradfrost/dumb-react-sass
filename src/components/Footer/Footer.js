@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Footer.css";
 import { InlineForm } from "../InlineForm/InlineForm";
 
 export class Footer extends Component {

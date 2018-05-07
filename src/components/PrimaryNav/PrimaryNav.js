@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './PrimaryNav.css';
 
 export class PrimaryNav extends Component {
   render() {

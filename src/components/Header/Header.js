@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Header.css";
 import { Logo } from "../Logo/Logo";
 import { PrimaryNav } from "../PrimaryNav/PrimaryNav";
 import { InlineForm } from "../InlineForm/InlineForm";

@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    #SECTION
+\*------------------------------------*/
+
+/**
+ * Section
+ * 1) A section is a discrete section of a web page 
+ */
+.c-section {
+    padding: 2rem;
+}
+
+/**
+ * Section header
+ * 1) contains the section title, description and other header content 
+ */
+.c-section__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/**
+ * Section title 
+ */
+.c-section__title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/**
+ * Section description 
+ */
+.c-section__description {
+    margin: 0;
+}

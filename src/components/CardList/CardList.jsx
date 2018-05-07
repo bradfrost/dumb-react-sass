@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import "./CardList.css";
 import { Card } from "../Card/Card";
 
 export class CardList extends Component {
