@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #PRIMARY NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Primary navigation existing in the header and maybe the footer
+ */
+
+/**
+ * Primary navigation list
+ */
+.c-primary-nav__list {
+	display: flex;
+}
+
+/**
+ * Primary navigation item
+ */
+.c-primary-nav__item {
+	margin-right: 1rem;
+}
+
+/**
+ * Primary navigation link
+ */
+.c-primary-nav__link {
+	display: block;
+	padding: 0.5rem 0;
+	cursor: pointer;
+
+}
