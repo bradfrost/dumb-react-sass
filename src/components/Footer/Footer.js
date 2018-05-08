@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { InlineForm } from "../InlineForm/InlineForm";
+import globals from "../../data/globals.json";
 
 export class Footer extends Component {
     render() {
         return (
             <footer className="c-footer" {...this.props}>
-                <p>This is the footer.</p>
 				<InlineForm
 					method="post"
 					action="#"
@@ -14,6 +14,8 @@ export class Footer extends Component {
                     id="search-form"
                     label="Email address"
                 />
+
+                <p className="c-footer__copyright">&copy; { (new Date()).getFullYear() } { globals.company.name }</p>
             </footer>
         );
     }
