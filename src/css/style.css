@@ -115,38 +115,6 @@
     #MIXINS
 \*------------------------------------*/
 /*------------------------------------*\
-    #COLORS
-\*------------------------------------*/
-/**
- * In this file, we take the literal colors from our palette (defined in variables.scss) 
- * and define them against variables that we can utilise anywhere throughout the project.
- */
-/*------------------------------------*\
-    #GLOBAL TEXT COLOR
-\*------------------------------------*/
-/**
- * Body text and background colors
- */
-/**
- * Highlight colors
- */
-/*------------------------------------*\
-    #LINKS
-\*------------------------------------*/
-/*------------------------------------*\
-    #BUTTONS
-\*------------------------------------*/
-/*------------------------------------*\
-    #FORMS
-\*------------------------------------*/
-/*------------------------------------*\
-    #BREAKPOINTS
-\*------------------------------------*/
-/**
- * In this file, we take the literal colors from our palette and define them
- * against variables that we can utilise anywhere throughout the project.
- */
-/*------------------------------------*\
     #BASE
 \*------------------------------------*/
 /*------------------------------------*\
@@ -416,12 +384,12 @@ hr {
  */
 ::-moz-selection {
   color: #131313;
-  background: #ddd;
+  background: #dddddd;
   /* Gecko Browsers */ }
 
 ::selection {
   color: #131313;
-  background: #ddd;
+  background: #dddddd;
   /* WebKit/Blink Browsers */ }
 
 /**
@@ -541,6 +509,10 @@ tr {
   background: #333;
   color: #fff;
   padding: 2rem; }
+
+.c-footer__copyright {
+  margin-top: 2rem;
+  text-align: center; }
 
 /*------------------------------------*\
     #HEADER

@@ -34,13 +34,13 @@ hr {
  * Selection styles
  */
 ::-moz-selection {
-	color: $color-text-highlight;
-	background: $color-text-highlight-bg; /* Gecko Browsers */
+	color: #131313;
+	background: #dddddd; /* Gecko Browsers */
 }
 
 ::selection {
-	color: $color-text-highlight;
-	background: $color-text-highlight-bg; /* WebKit/Blink Browsers */
+	color: #131313;
+	background: #dddddd; /* WebKit/Blink Browsers */
 }
 
 /**

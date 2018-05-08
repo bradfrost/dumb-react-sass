@@ -10,15 +10,15 @@
  * Input placeholder text base styles
  */
 ::-webkit-input-placeholder {
-   color: $color-form-placeholder;
+   color: $color-gray-50;
 }
 
 ::-moz-placeholder {
-   color: $color-form-placeholder;
+   color: $color-gray-50;
 }
 
 :-ms-input-placeholder {
-   color: $color-form-placeholder;
+   color: $color-gray-50;
 }
 
 /**
@@ -43,7 +43,7 @@ legend {
 label {
 	display: block;
     padding-bottom: 0.25rem;
-    color: $color-form-label;
+    color: $color-gray-93;
 }
 
 /**
@@ -68,11 +68,11 @@ textarea {
 input, textarea {
     width: 100%;
     padding: 0.5rem;
-    border: $border-thickness solid $color-form-border;
-    background: $color-form-bg;
+    border: $border-thickness solid $color-gray-73;
+    background: $color-white;
 
     &:focus {
-		border-color: $color-form-border-focus;
+		border-color: $color-gray-93;
 	}
 }
 
@@ -90,7 +90,7 @@ input[type="checkbox"],
 input[type="radio"] {
     width: auto;
     margin-right: 0.3rem;
-    border-color: $color-form-border;
+    border-color: $color-gray-73;
 }
 
 /**
@@ -109,12 +109,12 @@ select {
     display: block;
 	font-size: $font-size-med;
 	width: 100%;
-    border: $border-thickness solid $color-form-border;
+    border: $border-thickness solid $color-gray-73;
     padding: 0.5rem;
-    background: $color-form-bg;
-    color: $color-form;
+    background: $color-white;
+    color: $color-gray-93;
 
 	&:focus {
-		border-color: $color-form-border-focus;
+		border-color: $color-gray-93;
 	}
 }

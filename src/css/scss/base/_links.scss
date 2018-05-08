@@ -6,20 +6,20 @@
  * Link base styles
  */
 a {
-	color: $color-links;
+	color: $color-gray-73;
 	text-decoration: none;
 	outline: 0;
 	transition: color $anim-fade-quick $anim-ease;
 
 	&:hover, &:focus {
-		color: $color-links-hover;
+		color: $color-gray-50;
 	}
 
 	&:active {
-		color: $color-links-active;
+		color: $color-gray-93;
 	}
 
 	&:visited {
-		color: $color-links-visited;
+		color: $color-gray-93;
 	}
 }
