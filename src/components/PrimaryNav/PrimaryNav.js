@@ -6,8 +6,8 @@ export class PrimaryNav extends Component {
     return (
       <nav className="c-primary-nav { this.props.styleModifier }">
         <ul className="c-primary-nav__list">
-          {this.props.listItems.map(function(listItem){
-            return <li class="c-primary-nav__item">
+          {this.props.listItems.map(function(listItem, index){
+            return <li key={index} className="c-primary-nav__item">
               <a href={ listItem.href }>
                 { listItem.text }
               </a>

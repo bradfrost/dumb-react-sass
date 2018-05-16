@@ -4,9 +4,16 @@ import classnames from "classnames";
 export class Button extends Component {
 
     render() {
+        const {
+            text,
+            isSecondary,
+            styleModifier
+        } = this.props;
+
         let btnClass = classnames(
             "c-btn",
-            this.props.isSecondary && "c-btn--secondary"
+            isSecondary && "c-btn--secondary",
+            styleModifier && `${styleModifier}`,
         );
 
         return (
@@ -14,7 +21,7 @@ export class Button extends Component {
                 className={ btnClass }
                 {...this.props}
             >
-                {this.props.text}
+                {text}
             </button>
         );
     }
