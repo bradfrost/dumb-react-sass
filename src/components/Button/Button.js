@@ -4,12 +4,10 @@ import classnames from "classnames";
 export class Button extends Component {
 
     render() {
-        //TODO: I don't know the most elegent, legible way
-        //      to stitch together classNames based on props.
-        let btnClass = classnames({
-            "c-btn": true,
-            "c-btn--secondary": this.props.isSecondary
-        });
+        let btnClass = classnames(
+            "c-btn",
+            this.props.isSecondary && "c-btn--secondary"
+        );
 
         return (
             <button
