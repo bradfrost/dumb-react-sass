@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 export class Card extends Component {
     render() {
-        let cardClass = 'c-card';
-        if (this.props.theme) {
-            cardClass += ` c-card--${this.props.theme}`;
-        }
+        let cardClass = classnames(
+            "c-card",
+            this.props.theme && `c-card--${this.props.theme}`
+        );
 
         return (
             <div className={ cardClass }>
