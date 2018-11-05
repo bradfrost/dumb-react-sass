@@ -9,8 +9,8 @@ export class CardList extends Component {
                 {this.props.listItems.map(function(listItem, index) {
                     return (
                         <Card
-                            key={index}
-                            styleModifier={listItem.styleModifier}
+                            key={`c-card-${index}`}
+                            theme={listItem.theme}
                             title={listItem.title}
                             description={listItem.description}
                         />
@@ -21,6 +21,6 @@ export class CardList extends Component {
     }
 }
 
-CardList.defaultProps = {
-	listItems: PropTypes.array
+CardList.propTypes = {
+    listItems: PropTypes.array
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import { Button } from "../Button/Button";
 
 export class InlineForm extends Component {
@@ -15,8 +16,17 @@ export class InlineForm extends Component {
                     className="c-inline-form__input"
                     placeholder={this.props.placeholder}
                 />
-                <Button styleModifier="c-btn--light" text={this.props.cta} />
+                <Button text={this.props.cta} />
             </form>
         );
     }
+}
+
+InlineForm.propTypes = {
+    method: PropTypes.oneOf(['get', 'post']).isRequired,
+    action: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    placeholder: PropTypes.string,
+    cta: PropTypes.string
 }

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import classnames from "classnames";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export class Card extends Component {
     render() {
-        let cardClass = classnames(
-            "c-card",
-            this.props.theme && `c-card--${this.props.theme}`
-        );
+        let cardClass = classnames({
+            "c-card": true,
+            "c-card--dark": this.props.theme === "dark"
+        });
 
         return (
-            <div className={ cardClass }>
+            <div className={cardClass}>
                 <header className="c-card__header">
                     <h3 className="c-card__title">{this.props.title}</h3>
                     <p className="c-card__description">
@@ -23,9 +23,14 @@ export class Card extends Component {
     }
 }
 
-Card.defaultProps = {
-    styleModifier: PropTypes.oneOf(['', 'c-card--dark']),
-	title: 'Card Title',
-    description: 'This is the card description',
+Card.propTypes = {
+    cardClass: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
     children: PropTypes.node
 }
+
+Card.defaultProps = {
+    title: "Card Title",
+    description: "This is the card description"
+};

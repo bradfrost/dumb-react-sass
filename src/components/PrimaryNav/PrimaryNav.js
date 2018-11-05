@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class PrimaryNav extends Component {
   render() {
@@ -7,7 +8,7 @@ export class PrimaryNav extends Component {
       <nav className="c-primary-nav { this.props.styleModifier }">
         <ul className="c-primary-nav__list">
           {this.props.listItems.map(function(listItem, index){
-            return <li key={index} className="c-primary-nav__item">
+            return <li className="c-primary-nav__item" key={`c-primary-nav__item-${index}`}>
               <a href={ listItem.href }>
                 { listItem.text }
               </a>
@@ -17,5 +18,11 @@ export class PrimaryNav extends Component {
       </nav>
     );
   }
+}
+
+PrimaryNav.propTypes = {
+  listItems: PropTypes.array.isRequired,
+  href: PropTypes.string,
+  text: PropTypes.string
 }
 
