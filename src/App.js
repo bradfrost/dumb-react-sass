@@ -15,7 +15,7 @@ class App extends Component {
 		<div className="App">
 			<Header />
 
-			<Hero title="This is my hero" description="This is the hero description text" heroImgSrc={ heroImg } />
+			<Hero title="This is my hero" description="This is the hero description text" heroimgsrc={ heroImg } heroimgalt="Alt" />
 			<Section title="Hi I'm a section title" description="This is a description of the section">
 		  		<CardList listItems={[
 					{
