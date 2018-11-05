@@ -13,6 +13,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "scss": "node-sass --output-style compressed -o src/css src/css",
+    "watch:css": "onchange 'src/css/**/*.scss' -- npm run scss",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -27,6 +29,7 @@
     "classnames": "^2.2.6",
     "css-loader": "^0.28.11",
     "node-sass": "^4.10.0",
+    "onchange": "^5.1.0",
     "sass-loader": "^7.1.0",
     "storybook-addon-smart-knobs": "^3.3.1",
     "style-loader": "^0.21.0"
